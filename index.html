@@ -4,38 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dispotism Rewritten</title>
-  
   <link rel="manifest" href="manifest.json">
-  
-  <meta name="theme-color" content="#ff0000">
-  
   <script>
-    // 1. Registra il Service Worker per rendere l'App installabile
+    // Registrazione Service Worker per l'installazione
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js');
     }
 
-    // 2. Dopo un brevissimo ritardo, reindirizza al sito reale
-    // Il ritardo permette al browser di leggere il manifest
-    setTimeout(function() {
-      window.location.href = "https://sites.google.com/view/dispotismrewritten/home";
-    }, 500); 
+    // Reindirizzamento immediato alla Home esatta di Google Sites
+    // NOTA: Verifica che l'URL qui sotto sia l'indirizzo pubblico esatto del tuo sito
+    window.location.replace("https://sites.google.com/view/dispotismrewritten/home");
   </script>
-
-  <style>
-    body { 
-      background-color: #1a1a1a; 
-      color: #ff0000; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      height: 100vh; 
-      margin: 0; 
-      font-family: monospace;
-    }
-  </style>
 </head>
-<body>
-  <div>[LOGOS_CORE: REINDIRIZZAMENTO IN CORSO...]</div>
+<body style="background: #1a1a1a;">
 </body>
 </html>
